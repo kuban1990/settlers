@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CodersLab</title>
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="icons2/font-awesome-4.7.0/css/font-awesome.min.css">
+     <script src = 'jquery-3.1.1.min.js'></script>
+</head>
+<body>
+
+ <section id = "dataMenu">   
+<div id = "dataName"> 
+<p id = "name">
+</p>
+</div>     
+    
+<div id = "data">
+
+<p class = "player" id = "resources">
+</p>
+<p class = "player" id = "wood">
+</p>
+<p class = "player" id = "bricks">
+</p>
+<p class = "player" id = "iron">
+</p>
+<p class = "player" id = "food">
+</p>
+<p class = "player" id = "stones">
+</p>
+<p class = "player" id = "wheat">
+</p>
+<p class = "player" id = "commodity">
+</p>
+<p class = "player" id = "leather">
+</p>
+<p class = "player" id = "coins">
+</p>
+<p class = "player" id = "paper">
+</p>
+</div>
+</section>
+      <canvas id="canvas" width="1600" height="1300"></canvas>
+
+<div id = "settle" class = "button">
+START SETTLING
+</div>
+<div id = "endturn" class = "button">
+    START <br> GAME
+</div>
+<div id = "exchange" class = "button">
+BANK RESOURCE
+</div>
+
+    
+<div id = "exchangeField">
+    <span id = "left">player</span>
+    <span id = "right">bank</span>
+    <select id = "pexchange"></select>
+    <select id = "bexchange">
+    <option value="wood">wood</option>
+    <option value="bricks">bricks</option>
+    <option value="iron">iron</option>    
+    <option value="food">food</option>
+    <option value="stones">stones</option>
+    <option value="wheat">wheat</option>    
+    <option value="leather">leather</option>    
+    <option value="coins">coins</option>    
+    <option value="paper">paper</option>      
+        
+    </select>
+    
+    <div class = "close">
+       close
+    </div>
+    
+    <div id = "submit">
+       exchange
+    </div>
+    
+    </div> 
+    
+    
+<div id = "buyField">
+    <div id = "content">
+       close
+    </div>
+      <div class = "close">
+       close
+    </div>
+    
+    </div>
+    
+    
+<div id = "cardDisplay">
+    <div id = "content">
+    </div>
+      <div class = "close" id = "removeChilds">
+       close
+    </div>    
+</div>
+    
+<div id = "playerResource" class = "button">
+    PLAYER <br>
+    RESOURCE
+    </div>
+    
+    
+<div id = "showCard" class = "button">
+    SHOW <br>
+    CARDS
+    </div>
+    
+<div id = "deposit" class = "button">
+    CATHEDRAL <br>
+    DEPOSIT
+    </div>
+    
+<div id = "buyCard" class = "button">
+    BUY <br>
+    CARD
+    </div>
+    
+
+  <script src="js3.js" type="text/javascript"></script>
+</body>
+</html>
