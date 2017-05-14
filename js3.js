@@ -1605,9 +1605,9 @@ addingRes(player1)
 buttonTurn.addEventListener("click", function(){
   buttonTurn.innerHTML = "END </br> TURN";
   fieldExchange.style.display = "none";
-
    
 
+//definiowanie koloru
 if (playerTurns === 0){
 
   playerDisplayData("blue", player1)
@@ -1635,6 +1635,76 @@ if (playerTurns === 0){
   dice1Color = dice1Colors[Math.floor(Math.random()*6)];
 
   totalNumber = diceNumber1 + diceNumber2;
+    
+
+    //stawianie złodzieja
+function settingThief (){
+     
+        var menu = document.createElement("ul");
+  menu.style.position = "absolute";
+    menu.style.top = "-5px";
+  menu.style.padding = "0";
+  menu.style.display = "inline-block";
+  menu.style.zIndex = "1";
+    this.appendChild(menu)
+        console.log(this.firstElementChild)
+
+  var li1 = document.createElement("li");
+
+  li1.innerText = "set the thief";
+  var li2 = document.createElement("li");
+
+  li2.innerText = "close";
+        
+    menu.appendChild(li1);
+    menu.appendChild(li2);
+
+    li1.addEventListener("mouseover", function() {
+    this.style.backgroundColor = "black";
+    })
+    li1.addEventListener("mouseout", function() {
+    this.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+    })
+        
+    li2.addEventListener("mouseover", function() {
+    this.style.backgroundColor = "black";
+    })
+    li2.addEventListener("mouseout", function() {
+    this.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+    })
+ 
+
+    //napisać funckję związaną z działaniem złodzieja
+    
+  li1.addEventListener("click", function(){
+         event.stopPropagation();
+    this.parentElement.parentElement.style.backgroundColor = "black";
+      
+    for (var i = 0; i < numbers.length; i++){
+    numbers[i].removeEventListener('click', settingThief);
+           
+    }  
+       this.parentElement.style.display = "none";
+  });
+        
+        
+li2.addEventListener("click", function(){
+    this.parentElement.style.display = "none";
+    event.stopPropagation();   
+})    
+  }                   
+    
+var numbers = document.querySelectorAll('.numbers')
+
+if (totalNumber == 7){
+    alert("Set the thief")
+    for (var i = 0; i < numbers.length; i++){
+    numbers[i].addEventListener('click', settingThief);
+           
+    }    
+}    
+    
+
   var connections = document.querySelectorAll(".connections");
 
 //pobieranie surowców przy wypadnięciu odpowiedniej liczby oczek dla osady
